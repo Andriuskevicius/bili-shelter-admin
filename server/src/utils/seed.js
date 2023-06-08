@@ -43,7 +43,7 @@ export const seedDb = async () => {
   // create 9 messages
   const messagePromises = [...Array(9).keys()].map((index, i) => {
     const message = new Message({
-      text: faker.lorem.sentences(3),
+      name: faker.lorem.sentences(3),
     });
     return message;
   });

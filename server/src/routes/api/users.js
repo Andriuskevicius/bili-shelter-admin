@@ -116,7 +116,7 @@ router.delete('/:id', requireJwtAuth, async (req, res) => {
     // if (['email0@email.com', 'email1@email.com'].includes(tempUser.email))
     //   return res.status(400).json({ message: 'You can not delete seeded user.' });
 
-    //delete all messages from that user
+    //delete all animals from that user
     await Message.deleteMany({ user: tempUser.id });
     //delete user
     const user = await User.findByIdAndRemove(tempUser.id);

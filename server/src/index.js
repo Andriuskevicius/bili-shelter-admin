@@ -36,8 +36,7 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log('MongoDB Connected...');
-    seedDb();
+    console.log('MongoDB Connected.');
   })
   .catch((err) => console.log(err));
 
@@ -68,6 +67,6 @@ if (isProduction) {
 
   const server = https.createServer(httpsOptions, app).listen(port, () => {
     console.log('https server running at ' + port);
-    // console.log(all_routes(app));
+    console.log(all_routes(app));
   });
 }

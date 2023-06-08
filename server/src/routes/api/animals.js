@@ -6,10 +6,10 @@ const router = Router();
 
 router.get('/', async (req, res) => {
   try {
-    const messages = await Message.find().sort({ createdAt: 'desc' }).populate('user');
+    const animals = await Message.find().sort({ createdAt: 'desc' }).populate('user');
 
     res.json({
-      messages: messages.map((m) => {
+      animals: animals.map((m) => {
         return m.toJSON();
       }),
     });
@@ -34,7 +34,8 @@ router.post('/', requireJwtAuth, async (req, res) => {
 
   try {
     let message = await Message.create({
-      text: req.body.text,
+      name: req.body.name,
+      chip_id: req.body.chip_id,
       user: req.user.id,
     });
     message = await message.populate('user').execPopulate();
@@ -70,7 +71,7 @@ router.put('/:id', requireJwtAuth, async (req, res) => {
 
     let message = await Message.findByIdAndUpdate(
       req.params.id,
-      { text: req.body.text, user: tempMessage.user.id },
+      { name: req.body.name, chip_id: req.body.chip_id, user: tempMessage.user.id },
       { new: true },
     );
     if (!message) return res.status(404).json({ message: 'No message found.' });

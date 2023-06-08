@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import usersRoutes from './users';
-import messagesRoutes from './messages';
+import animalsRoutes from './animals';
 const router = Router();
 
 router.use('/users', usersRoutes);
-router.use('/messages', messagesRoutes);
+router.use('/animals', animalsRoutes);
 
 export default router;
