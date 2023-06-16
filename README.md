@@ -1,17 +1,6 @@
-# MERN Boilerplate
+# Bili.lt
 
-This is full stack boilerplate with React, Redux, Express, Mongoose and Passport. Skip the tedious part and get straight to developing your app.
-
-## Demo
-
-- Live demo is available here: **[Demo](https://mern-boilerplate.amd2.localhost3002.live)**
-
-## Deployment with Docker (2023. update)
-
-Since Heroku is no longer free I made Docker production deployment that you can use on any Linux VPS.
-
-- original [mern-docker-prod](https://github.com/nemanjam/mern-docker-prod) repository with Docker code and instructions that you can reuse to deploy your own Mern apps
-- Traefik part of the deployment [traefik-proxy](https://github.com/nemanjam/traefik-proxy) and [traefik-proxy/apps/mern-boilerplate](https://github.com/nemanjam/traefik-proxy/tree/main/apps/mern-boilerplate)
+This is personal project to manage shelter animals.
 
 
 ## Features
@@ -28,20 +17,6 @@ Since Heroku is no longer free I made Docker production deployment that you can 
   - Single `.env` file configuration
   - Image upload with Multer
   - Database seed
-
-- Client
-
-  - React client with functional components and Hooks
-  - Redux state management with Thunk for async actions
-  - CSS agnostic, so you don't waste your time replacing my CSS framework with yours
-  - Home, Users, Profile, Admin, Notfound, Login and Register pages
-  - Protected routes with Higher order components
-  - Different views for unauthenticated, authenticated and admin user
-  - Edit/Delete forms for Message and User with Formik and Yup validation
-  - Admin has privileges to edit and delete other users and their messages
-  - Layout component, so you can have pages without Navbar
-  - Loading states with Loader component
-  - Single config file within `/constants` folder
 
 ## Installation
 
@@ -110,32 +85,6 @@ You are good to go, server will be available on `https://localhost:5000`
 ```
 $ npm run server
 ```
-
-### Client
-
-Just install the dependencies and run the dev server. App will load on `https://localhost:3000`.
-
-```
-$ cd client
-$ npm install
-$ npm start
-```
-
-That's it as far for development setup. For production check the `Deployment on Heroku` section.
-
-## Screenshots
-
-![Screenshot1](/screenshots/Screenshot_1.png)
-
-![Screenshot2](/screenshots/Screenshot_2.png)
-
-![Screenshot3](/screenshots/Screenshot_3.png)
-
-![Screenshot4](/screenshots/Screenshot_4.png)
-
-![Screenshot5](/screenshots/Screenshot_5.png)
-
-![Screenshot6](/screenshots/Screenshot_6.png)
 
 ## Deployment on Heroku
 
